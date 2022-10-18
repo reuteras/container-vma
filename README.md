@@ -32,7 +32,16 @@ In the shell use the command **vma** to extract the *vma* file(s). Run **vma** w
 
 If the file is compressed with [zstd][zst] you can use **unzstd** to uncompress the image first.
 
+## Proxmox
+
+Links to interesting pages in the Proxmox wiki.
+
+- [Logical Volume Manager (LVM)][lvm]
+- [Storage: LVM][slv]
+
+  [lvm]: https://pve.proxmox.com/wiki/Logical_Volume_Manager_(LVM)
   [pro]: https://proxmox.com/en/
+  [slv]: https://pve.proxmox.com/wiki/Storage:_LVM
   [vma]: https://pve.proxmox.com/wiki/VMA
   [zst]: https://github.com/facebook/zstd
 
