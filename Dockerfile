@@ -1,4 +1,4 @@
-FROM debian:buster
+FROM debian:bookworm
 LABEL maintainer="Coding <code@ongoing.today>"
 
 ENV DEBIAN_FRONTEND noninteractive
@@ -9,7 +9,7 @@ RUN apt-get update && \
         curl \
         gnupg2 \
         zstd && \
-    echo "deb http://download.proxmox.com/debian buster pve-no-subscription" > /etc/apt/sources.list.d/proxmox.list && \
+    echo "deb http://download.proxmox.com/debian bookworm pve-no-subscription" > /etc/apt/sources.list.d/proxmox.list && \
     curl -s http://download.proxmox.com/debian/proxmox-ve-release-6.x.gpg > /etc/apt/trusted.gpg.d/proxmox-ve-release-6.x.gpg && \
     apt-get update && \
     apt-get -y install --no-install-recommends \
