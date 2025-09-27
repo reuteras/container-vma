@@ -1,4 +1,4 @@
-FROM debian:12.1
+FROM debian:13.1
 LABEL maintainer="Coding <code@ongoing.today>"
 
 ENV DEBIAN_FRONTEND noninteractive
