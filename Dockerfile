@@ -1,4 +1,4 @@
-FROM debian:bookworm
+FROM debian:12.1
 LABEL maintainer="Coding <code@ongoing.today>"
 
 ENV DEBIAN_FRONTEND noninteractive
