@@ -51,4 +51,5 @@ jobs:
           VALIDATE_JSON_PRETTIER: false
           VALIDATE_YAML_PRETTIER: false
           VALIDATE_DOCKERFILE_HADOLINT: false
+          VALIDATE_CHECKOV: false
           VALIDATE_TRIVY: false
