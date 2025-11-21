@@ -6,7 +6,7 @@ Tool to extract disk from [Proxmox][pro] [VMA][vma] backup files. Inspired by [h
 ## Download and build
 
     git clone https://github.com/reuteras/container-vma.git
-    cd container-git
+    cd container-vma
     docker build -t reuteras/container-vma .
 
 ## Usage

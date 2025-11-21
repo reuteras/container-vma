@@ -1,0 +1,5 @@
+---
+# Disable checks that are not relevant for this tool
+ignored:
+  - DL6001  # Use USER to switch to non-root user
+  - DL6002  # HEALTHCHECK instruction
