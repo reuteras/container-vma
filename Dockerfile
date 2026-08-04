@@ -3,6 +3,7 @@ LABEL maintainer="Coding <code@ongoing.today>"
 
 ENV DEBIAN_FRONTEND noninteractive
 
+# hadolint ignore=DL3008
 RUN apt-get update && \
     apt-get upgrade -yq && \
     apt-get -y install --no-install-recommends \
@@ -18,4 +19,4 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/* /usr/share/doc && \
     rm -rf /usr/local/share/man /var/cache/debconf/*-old
 
-CMD /bin/bash -l
+CMD ["/bin/bash", "-l"]
