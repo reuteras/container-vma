@@ -2,7 +2,6 @@
 
 Tool to extract disk from [Proxmox][pro] [VMA][vma] backup files. Inspired by [https://github.com/akaihola/docker-vma](https://github.com/akaihola/docker-vma).
 
-
 ## Download and build
 
     git clone https://github.com/reuteras/container-vma.git
@@ -44,4 +43,3 @@ Links to interesting pages in the Proxmox wiki.
   [slv]: https://pve.proxmox.com/wiki/Storage:_LVM
   [vma]: https://pve.proxmox.com/wiki/VMA
   [zst]: https://github.com/facebook/zstd
-
