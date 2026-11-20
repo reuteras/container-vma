@@ -1,7 +1,7 @@
 FROM debian:13.7
 LABEL maintainer="Coding <code@ongoing.today>"
 
-ENV DEBIAN_FRONTEND noninteractive
+ENV DEBIAN_FRONTEND=noninteractive
 
 # hadolint ignore=DL3008
 RUN apt-get update && \
@@ -10,8 +10,8 @@ RUN apt-get update && \
         curl \
         gnupg2 \
         zstd && \
-    echo "deb http://download.proxmox.com/debian bookworm pve-no-subscription" > /etc/apt/sources.list.d/proxmox.list && \
-    curl -s http://download.proxmox.com/debian/proxmox-ve-release-6.x.gpg > /etc/apt/trusted.gpg.d/proxmox-ve-release-6.x.gpg && \
+    curl -fsSL http://download.proxmox.com/debian/proxmox-release-bookworm.gpg -o /usr/share/keyrings/proxmox-release-bookworm.gpg && \
+    echo "deb [signed-by=/usr/share/keyrings/proxmox-release-bookworm.gpg] http://download.proxmox.com/debian bookworm pve-no-subscription" > /etc/apt/sources.list.d/proxmox.list && \
     apt-get update && \
     apt-get -y install --no-install-recommends \
         pve-qemu-kvm && \
