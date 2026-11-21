@@ -3,10 +3,13 @@ LABEL maintainer="Coding <code@ongoing.today>"
 
 ENV DEBIAN_FRONTEND=noninteractive
 
+SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+
 # hadolint ignore=DL3008
 RUN apt-get update && \
     apt-get upgrade -yq && \
     apt-get -y install --no-install-recommends \
+        ca-certificates \
         curl \
         zstd && \
     curl -fsSL https://enterprise.proxmox.com/debian/proxmox-archive-keyring-trixie.gpg -o /usr/share/keyrings/proxmox-archive-keyring.gpg && \
